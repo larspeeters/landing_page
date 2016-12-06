@@ -1,0 +1,45 @@
+
+body.landing{
+    /*background: url("../images/lars.jpg");*/
+    background-size: 100%;
+    background-position-y: 25% ;
+    height: 0;
+}
+
+#page-wrapper, #page, #main-wrapper{
+    background: transparent !important;
+}
+
+
+.landing.pagewrap{
+    margin-bottom: 0px !important;
+}
+#serverFooter{
+    text-align: center;
+    font-family: 'Teko';
+}
+
+#serverInfo{
+    font-family: 'Teko';
+    font-size: 48px;
+    font-weight: 300;
+    height: 400px;
+}
+
+#serverInfo li{
+    list-style: none;
+}
+
+#serverTitle{
+    font-family: 'Permanent Marker';
+    font-size: 48px;
+color: #8b2a25;
+}
+
+#header, .menu-wrap, #breadcrumb {
+    display: none !important;
+}
+
+#footer-wrapper{
+    opacity: 0.7;
+}

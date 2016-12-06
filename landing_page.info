@@ -1,0 +1,16 @@
+name = Landing page
+description = A landing page for game servers
+version = VERSION
+core = 7.x
+package = Custom
+
+
+;Dependency
+Dependencies[] = panels:panels_extra_layouts
+
+;Stylesheets
+stylesheets[all][] = css/landing.css
+
+
+;jQuery
+scripts[] = 'js/landing.js'
