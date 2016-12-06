@@ -10,8 +10,8 @@
 <div id="serverInfo">
     <div id="player"></div>
     <ul>
-        <li>Gamemode: </li>
-        <li>Map: </li>
-        <li>Players: </li>
+        <li>Gamemode:<span id="" ></span></li>
+        <li>Map: <span id="mapname" ></span></li>
+        <li>Players: <span id="playerslots" ></span> </li>
     </ul>
 </div>

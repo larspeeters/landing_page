@@ -1,6 +1,6 @@
 
 body.landing{
-    /*background: url("../images/lars.jpg");*/
+    background: url("../images/lars.jpg");
     background-size: 100%;
     background-position-y: 25% ;
     height: 0;
@@ -14,6 +14,16 @@ body.landing{
 .landing.pagewrap{
     margin-bottom: 0px !important;
 }
+
+#steamuser h1{
+	font-size: 24px;
+	text-align: center;
+}
+
+#avatar{
+	float: left;
+}
+
 #serverFooter{
     text-align: center;
     font-family: 'Teko';
@@ -36,10 +46,6 @@ body.landing{
 color: #8b2a25;
 }
 
-#header, .menu-wrap, #breadcrumb {
+#footer-wrapper, #header, .menu-wrap, #breadcrumb {
     display: none !important;
-}
-
-#footer-wrapper{
-    opacity: 0.7;
 }

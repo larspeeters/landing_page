@@ -9,4 +9,4 @@ if(isset($_GET)){
 
 }
 ?>
-<div id="serverTitle" >The Good, The Bad & The Mighty.</div>
+<div id="serverTitle" ></div>
