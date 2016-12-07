@@ -8,7 +8,7 @@
 ?>
 
 <div id="serverInfo">
-    <div id="player"></div>
+    <h1 class="title">Server info</h1>
     <ul>
         <li>Gamemode:<span id="" ></span></li>
         <li>Map: <span id="mapname" ></span></li>

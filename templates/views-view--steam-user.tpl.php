@@ -14,6 +14,6 @@
 ?>
 
 <div id="steamuser">
-	<h1>Player info</h1>
+	<h1 class="title">Player info</h1>
     <div id="player"><img src="<?php echo $avatar ?>" id="avatar" /> <span id="username"><?php echo $content['response']['players'][0]['personaname']; ?></span></div>
 </div>
