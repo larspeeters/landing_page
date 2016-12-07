@@ -9,6 +9,7 @@
 
 <div id="serverInfo">
     <h1 class="title">Server info</h1>
+    <div style="text-align:center;margin:0; height:130px;"><img id="map" src="http://image.www.gametracker.com/images/maps/160x120/garrysmod/ttt_terrortown.jpg" /> </div>
     <ul>
         <li>Gamemode:<span id="" ></span></li>
         <li>Map: <span id="mapname" ></span></li>
