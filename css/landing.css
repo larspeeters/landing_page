@@ -1,9 +1,9 @@
 /**BODY**/
 body.landing{
-    /*background: url("../images/lars.jpg");*/
+    /*background: url("../images/banner2.jpg");*/
     background-size: 100%;
-    background-position-y: 25% ;
-    height: 0;
+    background-origin: content;
+    background-repeat: no-repeat;
 }
 
 #page-wrapper, #page, #main-wrapper{
@@ -90,9 +90,15 @@ body.landing{
 }
 
     /**Footer**/
-#serverFooter{
+.serverFooter{
     text-align: center;
     font-family: 'Teko';
+}
+
+#download{
+    background-color: #1F2F41 ;
+    color: white;
+    height: 25px;
 }
 
 
