@@ -1,9 +1,10 @@
 /**BODY**/
 body.landing{
-    /*background: url("../images/banner2.jpg");*/
+    background: url("../images/background.jpg");
     background-size: 100%;
     background-origin: content;
     background-repeat: no-repeat;
+	overflow: hidden;
 }
 
 #page-wrapper, #page, #main-wrapper{
@@ -20,6 +21,7 @@ body.landing{
     font-family: 'Permanent Marker';
     font-size: 48px;
     color: #8b2a25;
+	margin-top: 12%;
 }
 
 

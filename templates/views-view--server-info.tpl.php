@@ -9,9 +9,9 @@
 
 <div id="serverInfo">
     <h1 class="title">Server info</h1>
-    <div style="text-align:center;margin:0; height:130px;"><img id="map" src="http://image.www.gametracker.com/images/maps/160x120/garrysmod/cs_italy.jpg" /> </div>
+    <div style="text-align:center;margin:0; height:130px;"><img id="map" src="" /> </div>
     <ul>
-        <li>Gamemode:<span id="" ></span></li>
+        <li>Gamemode:<span id="gamemode" ></span></li>
         <li>Map: <span id="mapname" ></span></li>
         <li>Players: <span id="playerslots" ></span> </li>
     </ul>

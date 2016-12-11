@@ -35,7 +35,7 @@
      * Sets the server info data on the loading screen. This will be called on
      * the `GameDetails` loading screen event.
      */
-    LOAD.setServerInfo = function (serverName, mapName, maxPlayers) {
+    LOAD.setServerInfo = function (serverName, mapName, maxPlayers,gamemode) {
         // set map preview image
         // this.$.mapPreview.src = 'asset://mapimage/' + mapName;
 
@@ -43,7 +43,12 @@
         //this.$.mapPreview.src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
 
         //this.$.mapName.innerText = mapName;
-        this.$.serverName.innerText = "server";
+        document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
+        document.getElementById('serverTitle').innerText = serverName;
+        document.getElementById('mapname').innerText = mapName;
+        document.getElementById('gamemode').innerText = gamemode;
+        document.getElementById('playerslots').innerText = maxPlayers + ' player slots';
+       //this.$.serverName.innerText = serverName;
         //this.$.playerSlots.innerText = maxPlayers + ' player slots';
     };
 	
@@ -61,7 +66,8 @@
      * @param {String} gamemode   Gamemode folder name.
      */
     window.GameDetails = function (serverName, serverUrl, mapName, maxPlayers, steamid, gamemode) {
-        document.getElementById('serverTitle').innerText = serverName;
+        LOAD.setServerInfo(serverName,mapName,maxPlayers,gamemode)
+        //document.getElementById('serverTitle').innerText = "test";
     };
    
 })(jQuery);
