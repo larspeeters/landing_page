@@ -8,11 +8,14 @@
 ?>
 
 <div id="serverInfo">
+
     <h1 class="title">Server info</h1>
+    <div class="background">
     <div style="text-align:center;margin:0; height:130px;"><img id="map" src="" /> </div>
     <ul>
-        <li>Gamemode:<span id="gamemode" ></span></li>
-        <li>Map: <span id="mapname" ></span></li>
-        <li>Players: <span id="playerslots" ></span> </li>
+        <li><span class="info">Gamemode: </span><span class="textinfo" id="gamemode" ></span></li>
+        <li><span class="info">Map: </span><span class="textinfo" id="mapname" ></span></li>
+        <li><span class="info">Players: </span><span class="textinfo" id="playerslots" ></span> </li>
     </ul>
+    </div>
 </div>

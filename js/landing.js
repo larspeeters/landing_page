@@ -2,11 +2,9 @@
  * Created by lars.peeters on 4/12/2016.
  */
 (function($) {
-
-    'use strict';
+   'use strict';
 
     var LOAD = {};
-
     /**
      * Initialize the loading screen.
      */
@@ -43,7 +41,7 @@
         //this.$.mapPreview.src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
 
         //this.$.mapName.innerText = mapName;
-        document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
+        //document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
         document.getElementById('serverTitle').innerText = serverName;
         document.getElementById('mapname').innerText = mapName;
         document.getElementById('gamemode').innerText = gamemode;
@@ -66,9 +64,16 @@
      * @param {String} gamemode   Gamemode folder name.
      */
     window.GameDetails = function (serverName, serverUrl, mapName, maxPlayers, steamid, gamemode) {
-        LOAD.setServerInfo(serverName,mapName,maxPlayers,gamemode)
+        LOAD.setServerInfo(serverName,mapName,maxPlayers,gamemode);
         //document.getElementById('serverTitle').innerText = "test";
     };
-   
-})(jQuery);
 
+    window.onload = function() {
+        document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/gm_flatgrass.jpg';
+        document.getElementById('serverTitle').innerText = "The good, the bad, The Mighty.";
+        document.getElementById('mapname').innerText = "gm_flatgrass";
+        document.getElementById('gamemode').innerText = "murder";
+        document.getElementById('playerslots').innerText = '18 player slots';
+    }
+
+})(jQuery);
