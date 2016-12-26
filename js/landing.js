@@ -20,11 +20,6 @@
         this.$.status = document.getElementById('status');
         this.$.percentage = document.getElementById('percentage');*/
 
-        // server info
-        //this.$.mapPreview = document.getElementById('mappreview');
-        this.$.serverName = document.getElementById('serverTitle');
-        this.$.mapName = document.getElementById('mapname');
-        this.$.playerSlots = document.getElementById('playerslots');
 
         //this.updateProgress();
     };
@@ -37,20 +32,39 @@
         // set map preview image
         // this.$.mapPreview.src = 'asset://mapimage/' + mapName;
 
-        // gametracker.com map previews can also be used
-        //this.$.mapPreview.src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
 
-        //this.$.mapName.innerText = mapName;
-        //document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
+        document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
+
+        $('#map').error(function() {
+            document.getElementById('map').src = "http://vignette3.wikia.nocookie.net/gmod/images/3/36/GMod_Logo.png";
+        });
+
         document.getElementById('serverTitle').innerText = serverName;
         document.getElementById('mapname').innerText = mapName;
         document.getElementById('gamemode').innerText = gamemode;
-        document.getElementById('playerslots').innerText = maxPlayers + ' player slots';
-       //this.$.serverName.innerText = serverName;
-        //this.$.playerSlots.innerText = maxPlayers + ' player slots';
+        document.getElementById('playerslots').innerText = maxPlayers;
+
     };
-	
-	LOAD.init();
+
+
+    /**
+     * Called on the `DownloadingFile` loading screen event.
+     * Updates the loading progress and shows which file is currently being
+     * downloaded.
+     */
+    LOAD.onFileDownloading = function (filePath) {
+        var status = 'Downloading ' + filePath + '...';
+        this.onStatusChanged(status);
+    };
+
+    /**
+     * Called on the `SetStatusChanged` loading screen event.
+     */
+    LOAD.onStatusChanged = function (status) {
+        document.getElementById('download').innerText = status;
+    };
+
+    LOAD.init();
     window.LOAD = LOAD;
 	
 	/**
@@ -65,15 +79,6 @@
      */
     window.GameDetails = function (serverName, serverUrl, mapName, maxPlayers, steamid, gamemode) {
         LOAD.setServerInfo(serverName,mapName,maxPlayers,gamemode);
-        //document.getElementById('serverTitle').innerText = "test";
     };
-
-    window.onload = function() {
-        document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/gm_flatgrass.jpg';
-        document.getElementById('serverTitle').innerText = "The good, the bad, The Mighty.";
-        document.getElementById('mapname').innerText = "gm_flatgrass";
-        document.getElementById('gamemode').innerText = "murder";
-        document.getElementById('playerslots').innerText = '18 player slots';
-    }
 
 })(jQuery);

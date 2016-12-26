@@ -6,5 +6,4 @@
  * Time: 14:59
  */
 ?>
-<div class="serverFooter" id="download">Downlading files: </div>
 <div class="serverFooter">Powered by: Drupal 7 // custom module </div>
