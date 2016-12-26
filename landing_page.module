@@ -61,3 +61,9 @@ function landing_page_theme_registry_alter(&$theme_registry) {
         }
     }
 }
+
+function landing_page_ctools_plugin_api($module, $api) {
+    if ($module == 'page_manager' && $api == 'pages_default') {
+        return array('version' => 1);
+    }
+}

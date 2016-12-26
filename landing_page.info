@@ -6,7 +6,10 @@ package = Custom
 
 
 ;Dependency
-Dependencies[] = panels:panels_extra_layouts
+Dependencies[] = panels_extra_layouts
+Dependencies[] = font_your_face
+Dependencies[] = google_fonts
+dependencies[] = views
 
 ;Stylesheets
 stylesheets[all][] = css/landing.css
