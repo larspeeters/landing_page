@@ -38,7 +38,6 @@ function landing_page_views_api()
 {
     return array(
         'api' => 3,
-        'path' => drupal_get_path('module', 'landing_page') . '/views',
     );
 }
 
