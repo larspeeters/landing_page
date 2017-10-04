@@ -33,16 +33,15 @@
         // this.$.mapPreview.src = 'asset://mapimage/' + mapName;
 
 
-        document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
-
-        $('#map').error(function() {
-            document.getElementById('map').src = "http://vignette3.wikia.nocookie.net/gmod/images/3/36/GMod_Logo.png";
-        });
-
         document.getElementById('serverTitle').innerText = serverName;
         document.getElementById('mapname').innerText = mapName;
         document.getElementById('gamemode').innerText = gamemode;
         document.getElementById('playerslots').innerText = maxPlayers;
+        document.getElementById('map').src = 'http://image.www.gametracker.com/images/maps/160x120/garrysmod/' + mapName + '.jpg';
+
+        $('#map').on("error", function () {
+            document.getElementById('map').src = "http://vignette3.wikia.nocookie.net/gmod/images/3/36/GMod_Logo.png";
+        });
 
     };
 
@@ -66,7 +65,9 @@
 
     LOAD.init();
     window.LOAD = LOAD;
-	
+    $(document).ready(function(e){
+        LOAD.setServerInfo("The Good, The Bad, The Mighty.","ph_ratrun",10,"Gungaym");
+    });
 	/**
      * Called when the loading screen finishes loading all assets.
      *
@@ -77,8 +78,10 @@
      * @param {String} steamid    64-bit Steam ID.
      * @param {String} gamemode   Gamemode folder name.
      */
+		
     window.GameDetails = function (serverName, serverUrl, mapName, maxPlayers, steamid, gamemode) {
-        LOAD.setServerInfo(serverName,mapName,maxPlayers,gamemode);
+
+		LOAD.setServerInfo(serverName,mapName,maxPlayers,gamemode);
     };
 
 })(jQuery);
