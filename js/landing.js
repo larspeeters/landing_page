@@ -66,7 +66,7 @@
     LOAD.init();
     window.LOAD = LOAD;
     $(document).ready(function(e){
-        LOAD.setServerInfo("The Good, The Bad, The Mighty.","ph_ratrun",10,"Gungaym");
+        LOAD.setServerInfo("The Good, The Bad, The Mighty.","gm_flatgrass",10,"Gungaym");
     });
 	/**
      * Called when the loading screen finishes loading all assets.
